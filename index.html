@@ -1,17 +1,69 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>GitHub</title>
-	<style type="text/css">
-		h1{
-			color: #e4393c;
-		}
-	</style>
-</head>
-<body>
-	<h1>这是我的GitHub主页</h1>
-</body>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/2048.css"/>
+		<script src="js/2048.js"></script>
+	</head>
+	<body>
+		<p>Score: <span id="score"></span></p>
+		<div id="gridPanel">
+			<!--背景格 4×4-->
+			<div id="g00" class="grid"></div>
+			<div id="g01" class="grid"></div>
+			<div id="g02" class="grid"></div>
+			<div id="g03" class="grid"></div>
+			
+			
+			<div id="g10" class="grid"></div>
+			<div id="g11" class="grid"></div>
+			<div id="g12" class="grid"></div>
+			<div id="g13" class="grid"></div>
+			
+			
+			<div id="g20" class="grid"></div>
+			<div id="g21" class="grid"></div>
+			<div id="g22" class="grid"></div>
+			<div id="g23" class="grid"></div>
+			
+			
+			<div id="g30" class="grid"></div>
+			<div id="g31" class="grid"></div>
+			<div id="g32" class="grid"></div>
+			<div id="g33" class="grid"></div>
+			
+			<!--前景格 4×4-->
+			<div id="c00" class="cell"></div>
+			<div id="c01" class="cell"></div>
+			<div id="c02" class="cell"></div>
+			<div id="c03" class="cell"></div>
+			
+			<div id="c10" class="cell"></div>
+			<div id="c11" class="cell"></div>
+			<div id="c12" class="cell"></div>
+			<div id="c13" class="cell"></div>
+			
+			<div id="c20" class="cell"></div>
+			<div id="c21" class="cell"></div>
+			<div id="c22" class="cell"></div>
+			<div id="c23" class="cell"></div>
+			
+			<div id="c30" class="cell"></div>
+			<div id="c31" class="cell"></div>
+			<div id="c32" class="cell"></div>
+			<div id="c33" class="cell"></div>
+		</div>
+		<!--游戏结束界面-->
+		<div id="gameover">
+			<!--灰色半透明背景-->
+			<div></div>
+			<!--前景对话框-->
+			<p>
+				Game Over!</br>
+				Score:  <span id="finalScore"></span><br/>
+				<a class="btn" id="restart" onclick="game.start()">Try again!</a>
+			</p>
+		</div>
+	</body>
 </html>
